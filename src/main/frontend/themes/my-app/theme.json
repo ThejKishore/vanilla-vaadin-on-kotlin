@@ -1,0 +1,9 @@
+{
+  "assets" : {
+    "@fontsource/roboto" : {
+      "*.css" : "@fontsource/roboto",
+      "files/*" : "@fontsource/roboto/files"
+    }
+  },
+  "lumoImports" : [ "typography", "color", "spacing", "badge", "utility" ]
+}

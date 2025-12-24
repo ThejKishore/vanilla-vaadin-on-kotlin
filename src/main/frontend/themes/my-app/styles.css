@@ -1,0 +1,31 @@
+@import url('./main-layout.css');
+@import url('./views/credit-card-form-view.css');
+@import url('./views/gridwith-filters-view.css');
+@import url('@fontsource/roboto/index.css');    html, spreadsheet-view-export, grid-with-filters-view-export {
+      --lumo-primary-color: hsl(109, 61%, 24%);
+      --lumo-primary-color-50pct: hsla(109, 61%, 24%, 0.5);
+      --lumo-primary-color-10pct: hsla(109, 61%, 24%, 0.1);
+      --lumo-primary-text-color: hsl(214, 78%, 7%);
+      --lumo-font-size: 1rem;
+      --lumo-font-size-xxxl: 1.75rem;
+      --lumo-font-size-xxl: 1.375rem;
+      --lumo-font-size-xl: 1.125rem;
+      --lumo-font-size-l: 1rem;
+      --lumo-font-size-m: 0.875rem;
+      --lumo-font-size-s: 0.8125rem;
+      --lumo-font-size-xs: 0.75rem;
+      --lumo-font-size-xxs: 0.6875rem;
+      --lumo-line-height-m: 1.4;
+      --lumo-line-height-s: 1.2;
+      --lumo-line-height-xs: 1.1;
+      --lumo-border-radius-s: 1px;
+      --lumo-border-radius-m: 2px;
+      --lumo-border-radius-l: 4px;
+      --lumo-size-xl: 3rem;
+      --lumo-size-l: 2.5rem;
+      --lumo-size-m: 2rem;
+      --lumo-size-s: 1.75rem;
+      --lumo-size-xs: 1.5rem;
+--lumo-font-family: Roboto;
+
+    }

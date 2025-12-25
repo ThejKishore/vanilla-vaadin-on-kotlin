@@ -1,0 +1,48 @@
+/* Flex */
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+/* Order */
+
+.order-first {
+  order: -9999;
+}
+
+/* Responsive design */
+
+@media (min-width: 640px) {
+  /* Flex grow */
+  .sm\:flex-grow-0 {
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Flex grow */
+  .md\:flex-grow-0 {
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Flex grow */
+  .lg\:flex-grow-0 {
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Flex grow */
+  .xl\:flex-grow-0 {
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: 1536px) {
+  /* Flex grow */
+  .\32xl\:flex-grow-0 {
+    flex-grow: 0;
+  }
+}

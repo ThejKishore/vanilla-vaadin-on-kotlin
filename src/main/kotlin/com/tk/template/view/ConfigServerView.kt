@@ -6,11 +6,20 @@ import com.github.mvysny.karibudsl.v10.isExpand
 import com.github.mvysny.karibudsl.v10.textField
 import com.github.mvysny.karibudsl.v10.verticalLayout
 import com.github.mvysny.kaributools.addColumnFor
+import com.vaadin.flow.component.Component
+import com.vaadin.flow.component.contextmenu.ContextMenu
+import com.vaadin.flow.component.contextmenu.MenuItem
+import com.vaadin.flow.component.contextmenu.SubMenu
 import com.vaadin.flow.component.grid.Grid
+import com.vaadin.flow.component.icon.Icon
+import com.vaadin.flow.component.icon.VaadinIcon
+import com.vaadin.flow.component.menubar.MenuBar
+import com.vaadin.flow.component.notification.Notification
 import com.vaadin.flow.component.textfield.TextField
 import com.vaadin.flow.router.Menu
 import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
+
 
 @PageTitle("Config Server")
 @Route("configserver")
@@ -32,6 +41,7 @@ class ConfigServerView : KComposite() {
                 addColumnFor(ConfigDetials::appName).setHeader("App Name")
                 addColumnFor(ConfigDetials::propertyKey).setHeader("Property Key")
                 addColumnFor(ConfigDetials::propertyValue).setHeader("Property Value")
+                addComponentColumn { data -> createButton(data) }.setHeader("Action")
             }
 
             add(grid)
@@ -57,5 +67,30 @@ class ConfigServerView : KComposite() {
         }
     }
 
+
+    fun createButton(configDetials: ConfigDetials): Component {
+        val button = MenuBar() // Three dots menu button
+        var menuItem = button.addItem(":")
+        val subMenu: SubMenu = menuItem.subMenu
+         subMenu.addItem("View") { clickEvent ->  Notification.show("View ${configDetials.appName}", 3000, Notification.Position.TOP_START)}
+         subMenu.addItem("Delete") {}
+         subMenu.addItem("Download") {}
+         subMenu.addItem("Share") {}
+         subMenu.addItem("Archive") {}
+        return button
+
+    }
+
+
+
+    private fun createIconItem(
+        menu: MenuBar, iconName: VaadinIcon?,
+        ariaLabel: String?
+    ): MenuItem {
+        val icon: Icon = Icon(iconName)
+        val item: MenuItem = menu.addItem(icon)
+        item.setAriaLabel(ariaLabel)
+        return item
+    }
 
 }

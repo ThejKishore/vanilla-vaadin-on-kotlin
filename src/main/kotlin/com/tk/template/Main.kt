@@ -12,7 +12,7 @@ import com.vaadin.flow.theme.lumo.Lumo
 @StyleSheet(Lumo.STYLESHEET)
 @StyleSheet("styles.css")
 @NpmPackage(value = "@fontsource/roboto", version = "4.5.0")
-@Theme(value = "my-app")
+@Theme(value = "reindeer+")
 class AppShell : AppShellConfigurator
 
 /**
